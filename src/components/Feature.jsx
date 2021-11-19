@@ -1,10 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 import featureApi from '../API/featureApi'
 const Feature = () => {
-    const [featureData] = useState(featureApi);
     return (
         <>
-            { featureData.map((curElem) => {
+            { featureApi.map((curElem) => {
                 const { id, icon, iconAlt, title, para } = curElem;
                 return (
                   

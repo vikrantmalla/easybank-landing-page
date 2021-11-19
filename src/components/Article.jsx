@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
+import React from 'react'
 import articleApi from '../API/articleApi'
 
 const Article = () => {
-    const [articleData] = useState(articleApi)
+
     return (
         <>
-            {articleData.map((curElem) => {
+            {articleApi.map((curElem) => {
                 const { id, image, imageAlt, author, title, para } = curElem;
                 return (
                     <div key={id} className="articleCard" >
